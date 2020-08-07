@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = {
   entry: "./src/app.js",
+  mode: "production",
   plugins: [
     new MiniCssExtractPlugin({
       filename: "[name].css",
@@ -16,7 +17,7 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, "public"),
-    filename: "bundle.js",
+    filename: "src/bundle.js",
   },
   module: {
     rules: [
